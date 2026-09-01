@@ -1,5 +1,4 @@
-<img width="1048" height="672" alt="Captura de tela 2026-09-01 123633" src="https://github.com/user-attachments/assets/8904ebfa-847f-4ed4-bf05-4969fad798d5" />
-<img width="1048" height="672" alt="Captura de tela 2026-09-01 123633" src="https://github.com/user-attachments/assets/181f1184-db78-41ce-bd9c-eda8e450fec8" />
+
 # Subindo-e-Protegendo-um-Servidor-Web-Linux-De-VM-Local-para-AWS-Cloud
 # 🐧 linux webserver to aws cloud
 
@@ -43,6 +42,5 @@ Servidor Web
    ▼
 Logs
 
-
-      <img width="1048" height="672" alt="Captura de tela 2026-09-01 123633" src="https://github.com/user-attachments/assets/88fb9dc9-10f7-424d-a0b2-560cfba85020" />
+<img width="1276" height="797" alt="Captura de tela 2026-09-01 124442" src="https://github.com/user-attachments/assets/81669c54-cbae-4b02-bace-b39f8c48d961" />
 
