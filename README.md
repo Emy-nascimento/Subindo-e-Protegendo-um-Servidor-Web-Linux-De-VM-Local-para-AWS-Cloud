@@ -6,13 +6,13 @@
 <img width="1276" height="797" alt="Captura de tela 2026-09-01 124442" src="https://github.com/user-attachments/assets/81669c54-cbae-4b02-bace-b39f8c48d961" />
 > Implantação e troubleshooting de um servidor Web Linux em máquina virtual, utilizando Nginx, HTTP e análise de logs.
 
-## 🎯 Objetivo
+## 🎯 Finalidade
 
 Configurar um servidor Web em ambiente Linux, validar seu funcionamento, realizar testes HTTP e analisar os registros de acesso do servidor.
 
 O projeto também teve como objetivo praticar troubleshooting de rede e serviços Linux.
 
-## 🖥️ Ambiente
+## 🖥️ ferramentas/laboratorio
 
 - Ubuntu Linux
 - Máquina virtual (VM)
@@ -20,6 +20,17 @@ O projeto também teve como objetivo praticar troubleshooting de rede e serviço
 - HTTP
 - Bash
 - curl
+
+  🧠 Competências praticadas
+Linux
+Administração básica de serviços
+Nginx
+IPv4
+HTTP
+curl
+Análise de logs
+Troubleshooting
+Linha de comando
 
 ## 🏗️ Arquitetura
 
@@ -39,37 +50,36 @@ Nginx
    ▼
 Servidor Web
 
-🔌 1. Configuração de rede
+## 1. Configuração de rede
+
 
 A interface de rede da máquina virtual foi identificada utilizando:
 
 ip -4 addr show enp0s3
 
-A interface enp0s3 apresentou o endereço IPv4:
+A interface enp0s3 apresentou o endereço IPv4: 192.168.0.16/24
 
-192.168.0.16/24
 
-🌐 2. Configuração e validação do Nginx
 
-O estado do serviço foi verificado com:
+## 2. Configuração e validação do Nginx
+
+O estado do serviço foi verificado com o comando:
 
 sudo systemctl status nginx --no-pager
 
-O serviço apresentou o estado:
-
-active (running)
+O serviço apresentou o estado: Active (running)
 
 A configuração também foi validada utilizando:
 
 sudo nginx -t
 
-O teste confirmou que a sintaxe da configuração estava correta.
-
 Após a validação, o serviço foi recarregado:
 
 sudo systemctl reload nginx
 
-🔎 3. Teste HTTP
+
+
+## 3. Teste HTTP
 
 O servidor foi testado utilizando curl:
 
@@ -83,7 +93,10 @@ A opção -I permite visualizar os cabeçalhos da resposta HTTP.
 
 Uma resposta 200 OK indica que a requisição foi processada com sucesso.
 
-📋 4. Análise dos logs
+
+
+
+## 4. Análise dos logs
 
 Os registros de acesso do Nginx foram acompanhados através de:
 
@@ -107,9 +120,7 @@ Durante o laboratório, inicialmente foi utilizado o endereço IP:
 
 O teste de conexão não foi bem-sucedido.
 
-A investigação da interface de rede mostrou que o endereço IP atual da máquina era:
-
-192.168.0.16
+A investigação da interface de rede mostrou que o endereço IP atual da máquina era: 192.168.0.16
 
 Após utilizar o endereço correto, o teste HTTP foi realizado novamente com sucesso.
 
@@ -128,23 +139,11 @@ Novo teste HTTP
 
 📸 6. Evidências
 Configuração de rede
-
 Nginx em execução
-
 Teste HTTP
-
 Logs de acesso
 
-🧠 Competências praticadas
-Linux
-Administração básica de serviços
-Nginx
-IPv4
-HTTP
-curl
-Análise de logs
-Troubleshooting
-Linha de comando
+
 🚧 Próxima etapa
 Migração para AWS Cloud
 
