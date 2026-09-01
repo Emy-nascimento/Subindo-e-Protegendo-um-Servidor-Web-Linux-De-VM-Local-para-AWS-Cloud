@@ -1,15 +1,45 @@
 # Subindo-e-Protegendo-um-Servidor-Web-Linux-De-VM-Local-para-AWS-Cloud
 # 🐧 linux webserver to aws cloud
 
-## 📌 Objetivo
-Projeto prático focado na instalação, configuração, hardening básico e análise de logs em um servidor web Linux (Ubuntu Server + Nginx), finalizando com o mapeamento equivalente para arquitetura em nuvem AWS.
+# 🐧 Linux Web Server — Nginx
 
----
+> Implantação e troubleshooting de um servidor Web Linux em máquina virtual, utilizando Nginx, HTTP e análise de logs.
 
-## ⚙️ Parte 1: Implementação Local (VirtualBox + Ubuntu Server)
+## 🎯 Objetivo
 
-### 1. Comandos Utilizados na Configuração
-- **Criação de Usuário e Permissões:**
-  ```bash
-  sudo adduser analista_soc
-  sudo usermod -aG sudo analista_soc
+Configurar um servidor Web em ambiente Linux, validar seu funcionamento, realizar testes HTTP e analisar os registros de acesso do servidor.
+
+O projeto também teve como objetivo praticar troubleshooting de rede e serviços Linux.
+
+## 🖥️ Ambiente
+
+- Ubuntu Linux
+- Máquina virtual (VM)
+- Nginx
+- HTTP
+- Bash
+- curl
+
+## 🏗️ Arquitetura
+
+```text
+Cliente
+   │
+   │ HTTP
+   ▼
+Rede local
+   │
+   ▼
+Ubuntu VM
+   │
+   ▼
+Nginx
+   │
+   ▼
+Servidor Web
+   │
+   ▼
+Logs
+
+
+      
