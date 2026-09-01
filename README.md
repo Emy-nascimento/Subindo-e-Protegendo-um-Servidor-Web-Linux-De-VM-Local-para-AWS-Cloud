@@ -38,9 +38,123 @@ Nginx
    │
    ▼
 Servidor Web
-   │
-   ▼
-Logs
 
+🔌 1. Configuração de rede
 
+A interface de rede da máquina virtual foi identificada utilizando:
 
+ip -4 addr show enp0s3
+
+A interface enp0s3 apresentou o endereço IPv4:
+
+192.168.0.16/24
+
+🌐 2. Configuração e validação do Nginx
+
+O estado do serviço foi verificado com:
+
+sudo systemctl status nginx --no-pager
+
+O serviço apresentou o estado:
+
+active (running)
+
+A configuração também foi validada utilizando:
+
+sudo nginx -t
+
+O teste confirmou que a sintaxe da configuração estava correta.
+
+Após a validação, o serviço foi recarregado:
+
+sudo systemctl reload nginx
+
+🔎 3. Teste HTTP
+
+O servidor foi testado utilizando curl:
+
+curl -I http://192.168.0.16
+
+Também foi realizado um teste através do endereço local:
+
+curl -I http://localhost
+
+A opção -I permite visualizar os cabeçalhos da resposta HTTP.
+
+Uma resposta 200 OK indica que a requisição foi processada com sucesso.
+
+📋 4. Análise dos logs
+
+Os registros de acesso do Nginx foram acompanhados através de:
+
+sudo tail -f /var/log/nginx/access.log
+
+Durante os testes foram observados diferentes códigos HTTP:
+
+Código	Significado
+200	Requisição processada com sucesso
+301	Redirecionamento permanente
+304	Recurso não modificado
+404	Recurso não encontrado
+
+Também foram observadas requisições provenientes de dispositivos da rede local.
+
+🛠️ 5. Troubleshooting
+
+Durante o laboratório, inicialmente foi utilizado o endereço IP:
+
+192.168.0.5
+
+O teste de conexão não foi bem-sucedido.
+
+A investigação da interface de rede mostrou que o endereço IP atual da máquina era:
+
+192.168.0.16
+
+Após utilizar o endereço correto, o teste HTTP foi realizado novamente com sucesso.
+
+Processo de diagnóstico
+Falha de conexão
+       ↓
+Verificação do Nginx
+       ↓
+Nginx ativo
+       ↓
+Verificação da interface de rede
+       ↓
+IP atual identificado
+       ↓
+Novo teste HTTP
+
+📸 6. Evidências
+Configuração de rede
+
+Nginx em execução
+
+Teste HTTP
+
+Logs de acesso
+
+🧠 Competências praticadas
+Linux
+Administração básica de serviços
+Nginx
+IPv4
+HTTP
+curl
+Análise de logs
+Troubleshooting
+Linha de comando
+🚧 Próxima etapa
+Migração para AWS Cloud
+
+A próxima etapa do projeto será reproduzir a infraestrutura em uma máquina virtual EC2 na AWS, adicionando conceitos de:
+
+EC2
+Security Groups
+Controle de acesso
+Hardening básico
+HTTPS
+Monitoramento e logs
+
+A etapa AWS ainda não foi implementada neste projeto.
