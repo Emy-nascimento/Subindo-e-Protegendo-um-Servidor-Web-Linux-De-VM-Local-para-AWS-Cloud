@@ -1,7 +1,30 @@
 
 # Subindo-e-Protegendo-um-Servidor-Web-Linux-De-VM-Local-para-AWS-Cloud
 # 🐧 linux webserver to aws cloud
+Status: 🟢 Etapa local concluída | ☁️ AWS em desenvolvimento
 
+Implantação, configuração e troubleshooting de um servidor Web Linux, com evolução planejada para infraestrutura em AWS.
+
+Parte concluída:
+
+Ubuntu Linux em VM
+Configuração e análise de rede IPv4
+Nginx
+Validação da configuração
+Testes HTTP com curl
+Análise de access.log
+Identificação de códigos HTTP 200, 301, 304 e 404
+Troubleshooting de endereço IP
+
+Próxima etapa:
+
+AWS EC2
+Security Groups
+Nginx na AWS
+Controle de acesso
+HTTPS
+Hardening básico
+Monitoramento/logs
 # 🐧 Linux Web Server — Nginx
 <img width="1276" height="797" alt="Captura de tela 2026-09-01 124442" src="https://github.com/user-attachments/assets/81669c54-cbae-4b02-bace-b39f8c48d961" />
 > Implantação e troubleshooting de um servidor Web Linux em máquina virtual, utilizando Nginx, HTTP e análise de logs.
