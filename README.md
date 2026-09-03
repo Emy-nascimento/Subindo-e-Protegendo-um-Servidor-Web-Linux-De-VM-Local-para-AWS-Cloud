@@ -25,10 +25,94 @@ Controle de acesso
 HTTPS
 Hardening básico
 Monitoramento/logs
-# 🐧 Linux Web Server — Nginx
+
+                INTERNET
+                    |
+                    v
+              AWS Security Group
+                    |
+                    v
+                EC2 Ubuntu
+                    |
+              +-----+-----+
+              |           |
+             UFW         Nginx
+              |           |
+              +-----+-----+
+                    |
+                 Fail2ban
+                    |
+                  Logs
+                  
+# 🐧 Linux Web Server Security
 <img width="1276" height="797" alt="Captura de tela 2026-09-01 124442" src="https://github.com/user-attachments/assets/81669c54-cbae-4b02-bace-b39f8c48d961" />
 > Implantação e troubleshooting de um servidor Web Linux em máquina virtual, utilizando Nginx, HTTP e análise de logs.
 
+## Objetivo
+
+Implementação e proteção de um servidor web Ubuntu
+em máquina virtual, utilizando Nginx, UFW e Fail2ban.
+
+## Arquitetura
+
+Windows
+   |
+   | HTTP
+   v
+Ubuntu VM
+   |
+   +-- Nginx
+   |
+   +-- UFW Firewall
+   |
+   +-- Fail2ban
+   |
+   +-- Logs
+
+## Tecnologias
+
+- Ubuntu Server
+- Nginx
+- UFW
+- Fail2ban
+- Linux
+- VirtualBox
+
+## Implementação
+
+### 1. Nginx
+
+Servidor web configurado para responder requisições HTTP.
+
+### 2. UFW
+
+Firewall configurado para permitir somente
+as portas necessárias.
+
+### 3. Fail2ban
+
+Monitoramento dos logs do Nginx para detectar
+tentativas repetidas de autenticação inválida.
+
+### 4. Teste
+
+Foram realizadas tentativas de autenticação inválidas
+a partir de uma máquina Windows.
+
+Após atingir o limite configurado, o Fail2ban
+bloqueou o endereço IP de origem.
+
+## Resultado
+
+O IP de teste foi identificado e bloqueado pelo Fail2ban.
+
+## Próximos passos
+
+- Hardening adicional do servidor
+- HTTPS/TLS
+- Monitoramento
+- Migração para AWS EC2
+- Configuração de Security Groups
 ## 🎯 Finalidade
 
 Configurar um servidor Web em ambiente Linux, validar seu funcionamento, realizar testes HTTP e analisar os registros de acesso do servidor.
