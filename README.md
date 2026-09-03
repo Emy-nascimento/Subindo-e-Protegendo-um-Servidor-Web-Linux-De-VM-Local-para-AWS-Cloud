@@ -94,10 +94,10 @@ tentativas repetidas de autenticação inválida.
 
 Foram realizadas tentativas de autenticação inválidas
 a partir de uma máquina Windows.
-
+<img width="1871" height="1017" alt="Captura de tela 2026-09-03 103053" src="https://github.com/user-attachments/assets/56f7f2c0-8b84-4259-8fa9-cb27f3d06181" />
 Após atingir o limite configurado, o Fail2ban
 bloqueou o endereço IP de origem.
-<img width="1871" height="1017" alt="Captura de tela 2026-09-03 103053" src="https://github.com/user-attachments/assets/56f7f2c0-8b84-4259-8fa9-cb27f3d06181" />
+
 
 ## Resultado
 
