@@ -102,7 +102,8 @@ bloqueou o endereço IP de origem.
 ## Resultado
 
 O IP de teste foi identificado e bloqueado pelo Fail2ban.
-<img width="1282" height="803" alt="image" src="https://github.com/user-attachments/assets/364fbfcf-8251-4838-accd-1b4811cc4c79" />
+<img width="1282" height="803" alt="Captura de tela 2026-09-03 103613" src="https://github.com/user-attachments/assets/b4d3d6b6-276c-4797-8f31-9c8a47275d4f" />
+
 
 
 ## Próximos passos
